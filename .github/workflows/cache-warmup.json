@@ -1,0 +1,20 @@
+{
+  "$schema": "https://cache-warmup.dev/config.schema.json",
+  "sitemaps": [
+    "https://dgnv.ir/maps/index.xml"
+  ],
+  "repeatAfter": 7200,
+  "crawlerOptions": {
+    "concurrency": 3,
+    "requestOptions": {
+      "delay": 8000,
+      "requestHeaders": {
+        "User-Agent": "GitHub-Cache-Warmup/1.0.0"
+      },
+      "timeout": 13
+    }
+  },
+  "strategy": "sort-by-lastmod",
+  "allowFailures": true,
+  "limit": 1300
+}
