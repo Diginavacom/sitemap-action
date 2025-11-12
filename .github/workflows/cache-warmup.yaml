@@ -24,18 +24,11 @@ jobs:
         id: warmup  # Optional: Gives this step an ID for referencing outputs later
         uses: eliashaeussler/cache-warmup-action@v1  # Pin to v1 for stability; update as new versions release
         with:
-          # Core inputs (customize these in the next step)
-          version: latest  # Version of eliashaeussler/cache-warmup library (≥0.7.0)
+          version: ^3.0  # Required for config file support; use 'latest' if preferred
           sitemaps: |
-            - https://dgnv.ir/maps/index.xml
-          repeatAfter: 7200
+            https://dgnv.ir/maps/index.xml
           limit: 1300
-          crawlerOptions: |
-            concurrency: 3
-            request_options:
-              delay: 8000
-                request_headers:
-                  User-Agent: 'GitHub-Cache-Warmup/1.0.0'
-              timeout: 13
-          strategy: sort-by-lastmod
-          allowFailures: true
+          config: cache-warmup.json  # Path to your config file (adjust if you placed it elsewhere, e.g., .github/cache-warmup.json)
+          # Optional: Add these for better logging
+          # progress: true
+          # verbosity: vvv
