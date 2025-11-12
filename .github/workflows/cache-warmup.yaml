@@ -1,0 +1,40 @@
+name: Cache Warmup
+
+on:
+  push:
+    tags:
+      - 'v*'  # Runs on tags like v1.0.0; adjust as needed (e.g., add branches: main)
+
+jobs:
+  warmup:
+    runs-on: ubuntu-latest  # Use ubuntu-latest for best compatibility; can switch to windows-latest or macos-latest if needed
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4  # Checks out your repo code (required for any local config files)
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'  # Use your project's PHP version (e.g., 8.1, 8.2); must be 8.0+
+          coverage: none  # Disables code coverage to speed up; set to 'xdebug' if needed for testing
+          extensions: none  # Add extensions like 'curl' if your project requires them (usually not needed here)
+
+      - name: Warm up caches
+        id: warmup  # Optional: Gives this step an ID for referencing outputs later
+        uses: eliashaeussler/cache-warmup-action@v1.0.0  # Pin to v1 for stability; update as new versions release
+        with:
+          # Core inputs (customize these in the next step)
+          version: latest  # Version of eliashaeussler/cache-warmup library (≥0.7.0)
+          sitemaps: |
+            - https://dgnv.ir/maps/index.xml
+          repeatAfter: 7200
+          limit: 1300
+          crawlerOptions: |
+            concurrency: 3
+            request_options:
+              delay: 8000
+                request_headers:
+                  User-Agent: 'GitHub-Cache-Warmup/1.0.0'
+              timeout: 13
+          strategy: sort-by-lastmod
+          allowFailures: true
