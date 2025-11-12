@@ -1,5 +1,4 @@
 {
-  "$schema": "https://cache-warmup.dev/config.schema.json",
   "sitemaps": [
     "https://dgnv.ir/maps/index.xml"
   ],
