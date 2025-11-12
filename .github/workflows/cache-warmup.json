@@ -7,7 +7,8 @@
   "crawlerOptions": {
     "concurrency": 3,
     "requestOptions": {
-      "delay": 8000,
+      "request_method": "GET",
+      "delay": 5000,
       "requestHeaders": {
         "User-Agent": "GitHub-Cache-Warmup/1.0.0"
       },
@@ -16,5 +17,5 @@
   },
   "strategy": "sort-by-lastmod",
   "allowFailures": true,
-  "limit": 1300
+  "limit": 700
 }
