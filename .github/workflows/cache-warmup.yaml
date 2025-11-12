@@ -24,7 +24,7 @@ jobs:
         id: warmup  # Optional: Gives this step an ID for referencing outputs later
         uses: eliashaeussler/cache-warmup-action@v1  # Pin to v1 for stability; update as new versions release
         with:
-          version: ^3.0  # Required for config file support; use 'latest' if preferred
+          version: latest  # Required for config file support; use 'latest' if preferred
           sitemaps: |
             https://dgnv.ir/maps/index.xml
           limit: 1300
