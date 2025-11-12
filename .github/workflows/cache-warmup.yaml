@@ -16,9 +16,9 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'  # Matches your original; test file uses 8.4 for stable, but 8.3 is fine (≥8.1)
+          php-version: latest  # Matches your original; test file uses 8.4 for stable, but 8.3 is fine (≥8.1)
           coverage: none  # Disables code coverage to speed up; set to 'xdebug' if needed for testing
-          extensions: none  # Add extensions like 'curl' if your project requires them (usually not needed here)
+          extensions: simplexml  # Add extensions like 'curl' if your project requires them (usually not needed here)
 
       - name: Warm up caches
         id: warmup  # Optional: Gives this step an ID for referencing outputs later
