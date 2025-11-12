@@ -22,7 +22,7 @@ jobs:
 
       - name: Warm up caches
         id: warmup  # Optional: Gives this step an ID for referencing outputs later
-        uses: eliashaeussler/cache-warmup-action@v1.0.0  # Pin to v1 for stability; update as new versions release
+        uses: eliashaeussler/cache-warmup-action@v1  # Pin to v1 for stability; update as new versions release
         with:
           # Core inputs (customize these in the next step)
           version: latest  # Version of eliashaeussler/cache-warmup library (≥0.7.0)
