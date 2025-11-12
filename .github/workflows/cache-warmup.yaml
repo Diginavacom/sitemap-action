@@ -24,11 +24,8 @@ jobs:
         id: warmup  # Optional: Gives this step an ID for referencing outputs later
         uses: eliashaeussler/cache-warmup-action@v1  # Pin to v1 for stability; update as new versions release
         with:
-          version: latest  # Required for config file support; use 'latest' if preferred
+          version: latest  # Updated: Uses 4.3.2+ for config support; alternatively, use '^4.3'
           sitemaps: |
             https://dgnv.ir/maps/index.xml
           limit: 1300
-          config: cache-warmup.json  # Path to your config file (adjust if you placed it elsewhere, e.g., .github/cache-warmup.json)
-          # Optional: Add these for better logging
-          # progress: true
-          # verbosity: vvv
+          config: cache-warmup.json  # Your config file path
