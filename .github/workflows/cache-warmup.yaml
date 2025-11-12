@@ -1,6 +1,7 @@
 name: Cache Warmup
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - 'v*'  # Runs on tags like v1.0.0; adjust as needed (e.g., add branches: main)
