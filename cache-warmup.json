@@ -5,10 +5,10 @@
   "repeatAfter": 7200,
   "crawlerOptions": {
     "concurrency": 3,
-    "requestOptions": {
+    "request_options": {
       "request_method": "GET",
       "delay": 5000,
-      "requestHeaders": {
+      "request_headers": {
         "User-Agent": "GitHub-Cache-Warmup/1.0.0"
       },
       "timeout": 13
