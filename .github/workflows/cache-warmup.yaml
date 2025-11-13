@@ -34,7 +34,7 @@ jobs:
           version: latest  # Fixed: Uses the stable version from the test file for config support
           sitemaps: 
             https://dgnv.ir/maps/index.xml
-          limit: 5
+          limit: 6
           config: cache-warmup.json  # Your config file path
           #progress: true  # Added for visibility, as in test file examples
           verbosity: v  # Added for detailed debugging, as in test file
