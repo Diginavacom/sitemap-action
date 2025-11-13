@@ -6,15 +6,22 @@
   "crawlerOptions": {
     "concurrency": 3,
     "request_options": {
-      "request_method": "GET",
       "delay": 5000,
-      "request_headers": {
-        "User-Agent": "GitHub-Cache-Warmup/1.0.0"
-      },
       "timeout": 13
+    },
+    "request_method": "GET",
+    "request_headers": {
+        "User-Agent": "GitHub-Cache-Warmup/v1"
+    }
+  },
+  "parserOptions": {
+    "request_headers": {
+      "User-Agent": "GitHub-Cache-Warmup/v1"
     }
   },
   "strategy": "sort-by-lastmod",
   "allowFailures": true,
-  "limit": 700
+  "limit": 3,
+  "logFile": "cache-warmup.log",
+  "logLevel": "info"
 }
