@@ -21,7 +21,10 @@
   },
   "strategy": "sort-by-lastmod",
   "allowFailures": true,
+  "stopOnFailure": false,
   "limit": 3,
+  "progress": true,
+  "format": "json",
   "logFile": "cache-warmup.log",
   "logLevel": "info"
 }
