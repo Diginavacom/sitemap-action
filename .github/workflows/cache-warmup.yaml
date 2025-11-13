@@ -41,6 +41,6 @@ jobs:
             request_options:
               delay: 5657
             request_method: GET
+          progress: true  # Added for visibility, as in test file examples
+          verbosity: vvv  # Added for detailed debugging, as in test file
           config: cache-warmup.json  # Your config file path
-          #progress: true  # Added for visibility, as in test file examples
-          verbosity: v  # Added for detailed debugging, as in test file
