@@ -4,7 +4,12 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 0,2,4,6,8,10,12,14,16,18,20,22 * * *'
+  pull_request:
+    branches:
+      - main
   push:
+    branches:
+      - '**'
     tags:
       - 'v*'  # Runs on tags like v1.0.0; adjust as needed (e.g., add branches: main)
 
@@ -31,5 +36,5 @@ jobs:
             https://dgnv.ir/maps/index.xml
           limit: 5
           config: cache-warmup.json  # Your config file path
-          progress: true  # Added for visibility, as in test file examples
-          verbosity: vvv  # Added for detailed debugging, as in test file
+          #progress: true  # Added for visibility, as in test file examples
+          verbosity: v  # Added for detailed debugging, as in test file
