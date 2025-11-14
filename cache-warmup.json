@@ -24,7 +24,7 @@
   "stopOnFailure": false,
   "limit": 3,
   "progress": true,
-  "format": "json",
+  "format": "text",
   "logFile": "cache-warmup.log",
   "logLevel": "info"
 }
