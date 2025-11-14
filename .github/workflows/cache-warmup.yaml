@@ -36,11 +36,5 @@ jobs:
           sitemaps: https://dgnv.ir/maps/index.xml
           limit: 200
           progress: true  # Added for visibility, as in test file examples
-          verbosity: vvv  # Added for detailed debugging, as in test file
+          verbosity: vv  # Added for detailed debugging, as in test file
           config: cache-warmup.json  # Your config file path
-
-     # Create release
-      - name: Create release
-        uses: ncipollo/release-action@v1
-        with:
-          generateReleaseNotes: true
