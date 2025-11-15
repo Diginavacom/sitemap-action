@@ -21,7 +21,7 @@
   },
   "clientOptions": {
     "verify": false,
-    "headers": {"Accept-Encoding": "gzip,deflate"}
+    "headers": {"Accept-Encoding": "gzip, deflate, br"}
   },
   "strategy": "sort-by-lastmod",
   "allowFailures": true,
