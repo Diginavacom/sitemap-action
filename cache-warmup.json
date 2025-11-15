@@ -20,7 +20,8 @@
     }
   },
   "clientOptions": {
-        "verify": false
+    "verify": false,
+    "headers": ["Accept-Encoding: gzip;"]
   },
   "strategy": "sort-by-lastmod",
   "allowFailures": true,
