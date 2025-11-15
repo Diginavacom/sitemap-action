@@ -16,6 +16,9 @@ on:
 jobs:
   warmups:
     runs-on: ubuntu-latest  # Use ubuntu-latest for best compatibility; can switch to windows-latest or macos-latest if needed
+    permissions:
+      contents: read, write
+      packages: write, read
     timeout-minutes: 1
     steps:
      - name: Checkout repository
