@@ -6,7 +6,7 @@
   "crawlerOptions": {
     "concurrency": 1,
     "request_options": {
-      "delay": 1200,
+      "delay": 5000,
       "timeout": 13
     },
     "request_method": "GET",
