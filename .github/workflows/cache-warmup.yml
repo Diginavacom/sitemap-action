@@ -16,7 +16,7 @@ on:
 jobs:
   warmups:
     runs-on: ubuntu-latest  # Use ubuntu-latest for best compatibility; can switch to windows-latest or macos-latest if needed
-    timeout-minutes: 1
+    timeout-minutes: 30
     steps:
      - name: Checkout repository
        uses: actions/checkout@v4.1.6
@@ -34,10 +34,10 @@ jobs:
        id: warmup  # Optional: Gives this step an ID for referencing outputs later
        uses: eliashaeussler/cache-warmup-action@v1  # Pin to v1 for stability; update as new versions release
        with:
-          version: 3.2.4 # Fixed: Uses the stable version from the test file for config support
+          version: latest # Fixed: Uses the stable version from the test file for config support
           sitemaps: |
             https://dgnv.ir/maps/index.xml
-          limit: 2
+          limit: 200
           progress: true  # Added for visibility, as in test file examples
           verbosity: vvv  # Added for detailed debugging, as in test file
           config: cache-warmup.json  # Your config file path
