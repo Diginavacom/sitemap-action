@@ -14,6 +14,11 @@
         "User-Agent": "GitHub-Cache-Warmup/v1"
     }
   },
+  "parserOptions": {
+    "request_headers": {
+      "User-Agent": "GitHub-Cache-Warmup/v1"
+    }
+  },
   "strategy": "sort-by-lastmod",
   "allowFailures": true,
   "stopOnFailure": false,
