@@ -35,8 +35,7 @@ jobs:
        uses: eliashaeussler/cache-warmup-action@1.0.0  # Pin to v1 for stability; update as new versions release
        with:
           version: latest  # Fixed: Uses the stable version from the test file for config support
-          sitemaps: |
-            - https://dgnv.ir/maps/index.xml
+          sitemaps: https://dgnv.ir/maps/index.xml
           limit: 2
           progress: true  # Added for visibility, as in test file examples
           verbosity: vvv  # Added for detailed debugging, as in test file
