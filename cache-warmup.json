@@ -4,9 +4,9 @@
   ],
   "repeatAfter": 7200,
   "crawlerOptions": {
-    "concurrency": 3,
+    "concurrency": 1,
     "request_options": {
-      "delay": 5000,
+      "delay": 1200,
       "timeout": 13
     },
     "request_method": "GET",
