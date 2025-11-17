@@ -1,8 +1,5 @@
 {
-  "sitemaps": [
-    ""
-  ],
-  "urls": ["https://dgnv.ir/track-kstv5ih.html"],
+  "sitemaps": "https://dgnv.ir/maps/index.xml",
   "repeatAfter": 7200,
   "crawlerOptions": {
     "concurrency": 1,
