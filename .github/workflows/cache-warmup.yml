@@ -14,11 +14,18 @@ on:
       - '**'  # Runs on tags like v1.0.0; adjust as needed (e.g., add branches: main)
 
 jobs:
+
+  prepare:
+    name: Prepare workflow
+    uses: eliashaeussler/.github/.github/workflows/pull-request.yaml@main
+
   warmups:
     runs-on: ubuntu-latest  # Use ubuntu-latest for best compatibility; can switch to windows-latest or macos-latest if needed
     permissions:
       contents: read
       packages: write
+    needs: prepare
+    if: needs.prepare.outputs.continue == 'true'
     timeout-minutes: 1
     steps:
      - name: Checkout repository
