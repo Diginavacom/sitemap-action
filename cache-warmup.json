@@ -1,6 +1,6 @@
 {
   "sitemaps": [
-    "http://dgnv.ir/maps/index.xml"
+    "https://dgnv.ir/maps/tracks-202511.xml"
   ],
   "repeatAfter": 7200,
   "crawlerOptions": {
