@@ -2,6 +2,7 @@
   "sitemaps": [
     "https://dgnv.ir/maps/tracks-202511.xml"
   ],
+  "urls": ["https://dgnv.ir/track-kstv5ih.html"],
   "repeatAfter": 7200,
   "crawlerOptions": {
     "concurrency": 1,
