@@ -19,7 +19,7 @@ jobs:
     permissions:
       contents: read
       packages: write
-    timeout-minutes: 2
+    timeout-minutes: 20
     steps:
      - name: Checkout repository
        uses: actions/checkout@v4
